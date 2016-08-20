@@ -1,0 +1,715 @@
+
+							: ADVANCED HTML :
+							  -------------
+
+1) <TIME> tag :
+
+-> Makes dates and times semantically rich.
+
+-> The text in-between the opening & closing tag can be any format for the date & time -- (the whole precise lot or just a part, like 
+   day).
+
+-> The "datetime" attribute should be in the machine-readable date and/or time.
+
+-> Valid date-time formats are : "2052-11" , "9:30", "2052-11-21" or "2052-11-21 09:30".
+
+-> This can also accomodate timezones and durations.
+
+
+E.g.-
+----
+
+<p>Written by Doctor Who on <time datetime="2052-11-21">Thursday 21st November 2052</time>.</p>
+
+
+-> If the textual content of <time> tag is already in machine-readable format, the "datetime" attribute is not needed.
+
+
+
+
+
+
+2) <MARK> tag :
+
+-> Text can be highlighted (as if using marker pen)
+
+-> It is not an emphasis, but an inclusion as the person who is commenting on some other persons words uses it for highlighting.
+
+
+E.g.-
+---
+
+<blockquote>
+    <p>He wants to play with his <mark>Legos</mark></p>
+</blockquote>
+
+<p>The person being quoted is clearly American because, for some odd reason, they pluralise "Lego".</p>
+
+
+
+
+** Simple Rules To Follow For designing Web Pages with HTML :-
+   --------------------------------------------------------
+
+-> Tags like <hr>, <small>, <s>, <u>, <i>, <b>   should be avoided as they have very little meaning, and are bad for accessibility.
+
+-> <small> is used for "small print", but "small print" has taken on meaning beyond the "print that is small"
+
+-> <hr> no longer is meant for "horizontal rules", but rather is used to provide "thematic breaks", between paragraphs in the chapters
+   of books.
+
+-> <sub> and <sup> should only be used for the purpose they are meant for and not for presentational purposes.
+
+
+
+
+
+3) CONDITIONAL ELEMENTS :-
+   --------------------
+
+-> These are simple HTML comments, that defines the correctional rules for IE browser, so as to correct the display of the page on
+   these browsers.
+
+-> The "HTML5 Shiv" code given by GOOGLE, helps older IE(<6) to recognize and implement HTML5 Elements on the web page, this code is
+   inserted using "Conditional Element".
+
+
+E.g. --
+--------
+<head>
+<link href="everything.css" rel="stylesheet">
+<!--[if IE]><link href="stupidie.css" rel="stylesheet"><![endif]-->
+</head>
+
+-> Everything Between [if IE] & [endif] is recognized by IE browser.
+
+
+-> To target a specific version of IE :
+
+1) <!--[if IE 6]>..
+2) <!--[if IE 7]>..
+3) <!--[if IE 8]>..
+4) <!--[if IE 9]>..
+
+
+-> To target versions that are greater than or less than a specific version --
+
+1) <!--[if IE gt 6]>
+2) <!--[if IE gte 8]>
+3) <!--[if IE lt 7]>
+4) <!--[if IE lte 7]>
+
+
+-> Conditional Comments should be avoided as much as possible.
+
+
+
+
+
+
+
+
+
+
+** TABLES : COLUMNS, HEADERS & FOOTERS :-
+   -----------------------------------
+
+4) <COLGROUP> & <COL>
+
+-> These tags allows to define the table columns and style them as desired(for each individual column)
+
+
+
+E.g.--
+------
+
+<table>
+    <colgroup>
+        <col>
+        <col class="alternative">
+        <col>
+    </colgroup>
+    <tr>
+        <td>This</td>
+        <td>That</td>
+        <td>The other</td>
+    </tr>
+    <tr>
+        <td>Ladybird</td>
+        <td>Locust</td>
+        <td>Lunch</td>
+    </tr>
+</table>
+
+-> The second column in this table will be styled differntly with "alternative" class of the CSS file.
+
+-> "SPAN" attribute can also be used with either <COL> or <COLGROUP> attributes.
+
+-> With colgroup it defines the number of rows, the column group belongs to.
+
+-> With <col> it defines the number of subsequent columns the defines rules will be applied to.
+
+-> When "SPAN" is used with the <COLGROUP>, <COL> tag should not be used.
+
+
+
+
+
+
+5) <CAPTION>
+
+-> This tag should be used to give caption for the table element to enhance accessibility.
+
+-> This tag should be given straight after the opening <TABLE> tag.
+
+-> The default place for Captions are "Above The Table", however to get the caption "Below The Table", following CSS option should
+   be used :
+
+<caption-side: bottom>
+
+
+
+E.g.--
+------
+
+<table>
+    <caption>Locust mating habits</caption>
+<!-- etc. -->
+
+
+-> <figcaption> is Preferrable over <caption> tag, if <TABLE> tag is created as the content of the <FIGURE> tag.
+
+
+
+
+
+
+
+
+6) HEADERS & FOOTERS :
+
+-> thead, tfoot & tbody 	allows seperation of header, footer & body.
+
+-> <thead> needs to come first.
+
+-> <tfoot> can come before <tbody>, but browsers will render the <tbody> element at the bottom of the table.
+
+-> A Table can contain more than one <tbody> elements.
+
+
+
+E.g.--
+-------
+
+<table>
+    <thead>
+        <tr>
+            <td>Header 1</td>
+            <td>Header 2</td>
+            <td>Header 3</td>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td>Footer 1</td>
+            <td>Footer 2</td>
+            <td>Footer 3</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+        <!-- etc. -->
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+** ACCESSIBLE LINKS :-
+   -----------------
+
+
+1) TABBING	-	<tabindex="value">
+
+-> This is important for users without an access to a pointing device, to tab through the links in some logical order defined by
+   <tabindex>.
+
+-> This is tag is not needed if the HTML is linear, as the logical order automatically falls into place.
+
+
+
+
+E.g.--
+--------
+<ul>
+    <li><a href="here.html" tabindex="1">Here</a></li>
+    <li><a href="there.html" tabindex="3">There</a></li>
+    <li><a href="limbo.html" tabindex="2">Limbo</a></li>
+</ul>
+
+
+
+
+2) LINK TITLES	-	<title="desc">
+
+-> This tag is used to explain more & give more information about the link destination, if the link itself is not self-descriptive.
+
+
+
+E.g.--
+--------
+
+<p>I'm really bad at writing link text. <a href="inept.html" title="Why I'm rubbish at writing link text: An explanation and an apology.">Click here</a> to find out more.</p>
+
+
+
+NOTE: Never try to open link in new tab unless necessary.
+
+
+
+
+
+
+
+
+3) ACCESS KEYS	-	<accesskey="key">
+
+-> Access keys allow easier navigation by assigning a keyboard shortcut to a link (which will usually gain focus when the user presses
+   “Alt” or “Ctrl” + the access key).
+ 
+
+E.g.--
+--------
+
+<a href="somepage.html" accesskey="s">Some page</a>
+
+
+
+
+
+4) Skipping HTML
+
+-> To aid tabbing, you can supply links that allow users to jump over chunks of your web page.
+
+
+
+E.g.--
+--------
+
+<header>
+    <h1>The Heading</h1>
+    <a href="#content">Skip to content</a>
+</header> 
+
+<nav>
+    <!--loads of navigation stuff -->
+</nav>
+
+<section id="content">
+    <!--lovely content -->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+** ACCESSIBLE FORMS **
+   ----------------
+
+
+1) LABELS :
+
+-> Each form field should have its own explicit label for accessibility.
+
+-> The "FOR" attribute attaches a label to an input element.
+
+
+E.g.--
+-------
+
+<form>
+    <label for="yourName">Your Name</label>
+    <input name="yourName" id="yourName">
+    <!-- etc. -->
+
+
+
+2) FIELD-SETS & LEGENDS :
+
+
+-> Fields for a specific purpose that are related, can be grouped into field-sets & legends can be used to caption the group.
+
+
+E.g.--
+------------
+
+<form action="somescript.php" >
+    <fieldset>
+        <legend>Name</legend>
+        <p>First name <input name="firstName"></p>
+        <p>Last name <input name="lastName"></p>
+    </fieldset>
+    <fieldset>
+        <legend>Address</legend>
+        <p>Address <textarea name="address"></textarea></p>
+        <p>Postal code <input name="postcode"></p>
+    </fieldset>
+    <!-- etc. -->
+
+
+
+
+3) OPTION GROUP :
+
+-> The <OPTGROUP> element groups options in a select box.
+
+-> It requires a "LABEL" attribute, the value of which is displayed as a non-selectable pseudo-heading preceding that group in the 
+   drop-down list of the visual browser.
+
+
+E.g.--
+----------
+
+
+<select name="country">
+    <optgroup label="Africa">
+        <option value="gam">Gambia</option>
+        <option value="mad">Madagascar</option>
+        <option value="nam">Namibia</option>
+    </optgroup>
+    <optgroup label="Europe">
+        <option value="fra">France</option>
+        <option value="rus">Russia</option>
+        <option value="uk">UK</option>
+    </optgroup>
+    <optgroup label="North America">
+        <option value="can">Canada</option>
+        <option value="mex">Mexico</option>
+        <option value="usa">USA</option>
+    </optgroup>
+</select>
+
+
+
+
+
+
+4) NAVIGATION FIELDS :
+
+-> Used to make the form elements more navigable using "TAB-STOPS" & "ACCESS KEYS".
+
+-> The "ACCESSKEY" & "TABINDEX" attributes can be added to the individual form tags like <INPUT> & <LEGEND>.
+
+
+E.g.--
+--------
+
+<input name="firstName" accesskey="f" tabindex="1">
+
+
+
+
+
+
+
+
+
+** HTML 5 :  NEW INPUT TYPES :--
+------------------------------------------------------------------------
+
+
+1) SEARCH :
+
+-> Places a search query text box
+
+E.g.--
+---------
+
+<input type="search" name="search">
+
+
+-> These elements can be easily targeted using CSS attribute selector:
+
+	   input[type=search]  {background: url(xyz.png) right no-repeat}
+
+
+
+
+
+2) TELEPHONE, URL & E-MAIL ADDRESS :
+
+<input type="tel" name="Telephone_number">
+<input type="url" name="web_address">
+<input type="email" name="email_address">
+
+
+-> Their content can be styled in CSS using selectors ":valid"	 &   ":invalid"     based on the content of the field is valid or invalid.
+
+
+	input[type=email] :valid {background: green}
+	input[type=email] :invalid{background: red}
+
+
+
+
+
+
+3) NUMBERS & RANGES :
+
+-> A simple text-box that allows users to type in numbers or cycle through the numbers(using up and down arrow at the side of the field).
+   It can be achieved with <input type="number"> .
+
+-> A "step" attribute can also be added to determine how much is added or subtracted from the number with each increment.
+
+-> "min"  &  "max"   attributes sets the minimum and maximum value in the cycle of values.
+
+
+E.g.--
+-----------
+
+<input type="number" name="number" step="2" min="20" max="30">
+
+
+
+-> ":valid"  &  ":invalid"  CSS attribute-selector can be employed to this as we..
+
+
+
+
+-> An alternative approach for selecting the number is using  "RANGE"  input type.
+
+-> It shows a horizontal slider which can be moved to select a value.
+
+
+E.g.--
+----------
+
+<input type="range" name="range" min="10" max="30" step="3" value="16"> 
+
+
+
+
+
+4) DATES & TIME :
+
+* type="datetime"
+* type="date"
+* type="month"
+* type="week"
+* type="time"
+* type="datetime-local"
+
+
+
+-> "STEP", "MIN" & "MAX" attributes can also be used with the "Dates & Time" attributes.
+
+-> CSS pseudo-classes can also be used with Dates & Times, to style according to "VALIDITY"
+
+
+
+
+
+
+
+5) COLORS :
+
+-> Allows user to select a color, by sending its 6-digit hex-code as its value.
+
+<input type="color" name="color" value="ff8800">
+
+
+
+
+
+
+
+
+** HTML 5 ATTRIBUTES & DATA LISTS :-
+---------------------------------------------------------
+
+
+1) PLACEHOLDER TEXT :
+
+<input type="email" name="mail_addr" placeholder="you@somewhere.com">
+
+-> This is usually used with text input fields as well as with textarea elements.
+
+
+
+
+
+
+2) AUTO-FOCUS :
+
+<input type="text" name="search" autofocus>
+
+
+
+
+
+** DATA-LISTS :
+
+<input name="country" list="country_name">
+<datalist id="country_name">
+    <option value="Afghanistan">
+    <option value="Albania">
+    <option value="Algeria">
+    <option value="Andorra">
+    <option value="Armenia">
+    <option value="Australia">
+    <option value="Austria">
+    <option value="Azerbaijan">
+    <!-- etc. -->
+</datalist>
+
+
+-> It gives suggestion for the part of the value entered.
+
+-> The "LIST" atrribute associates input element to datalist.
+
+
+
+
+
+
+
+
+
+
+** EMBEDDED CONTENTS : VIDEO, AUDIO & CANVAS  :-
+=========================================================
+
+
+
+1) VIDEO :
+
+
+<video src="url" controls></video>
+
+-> To remove the "CONTROLS" from the web-page, and add "AUTOPLAY" feature.
+
+<video src="url" autoplay></video>
+
+
+
+-> Also, both the "CONTROLS" & "AUTOPLAY" features can be simultaneously used.
+
+
+
+-> Other controls are	-	width, height, muted & loop
+
+<video src="url" width="300" height="200" loop controls autoplay muted></video>
+
+
+
+
+
+-> With "POSTER" attribute, an image can be displayed before the video is played.
+
+<video src="url" poster="url" controls></video>
+
+
+-> The image will automatically stretch or shrink to completely accomodate the area of video playback
+
+
+
+
+
+
+** FALL-BACK CONTENT :-
+
+-> The content added between opening and closing <VIDEO></VIDEO> tags, so that if the video is not recognized by the browser that element can be 
+   displayed.
+
+-> Anything can go in the "Fall-back Content".
+
+
+<video src="url" controls>
+	<h1> Sorry, but this video can't be played on your browser </h1>
+</video>
+
+
+
+
+
+
+
+** ALTERNATIVE CONTENT :-
+
+-> It provides a list of alternative videos to play, with a type attribute to define the MIME type of the video. The browser will select the first
+   video from the list that it can play.
+
+
+<video controls>
+    <source src="kitties.mp4" type="video/mp4; codecs='avc1, mp4a'">
+    <source src="kitties.webm" type="video/webm; codecs='vp8.0, vorbis'">
+    <p>Browser no likey HTML 5.</p>
+</video>
+
+
+
+
+
+
+** AUDIO :-
+-----------------------
+
+-> This tag is similar to the video tag, in structure.
+
+-> The attributes are	-	controls, autoplay, loop & src
+
+-> Alternative content can also be added as in <VIDEO> tag, with <SOURCE> tag.
+
+
+
+
+
+<audio src="meow_mix.mp3" controls>
+    Your stupid browser doesn't support HTML 5 audio.
+</audio>
+
+
+
+
+
+
+
+** CANVAS :-
+==================================
+
+
+-> It provides a canvas onto which JAVASCRIPT can be used to print all sorts of dynamic images, like, graphs, animated sprites or draft cat pictures.
+
+
+<canvas id="wittykitty" width="800" height="450">
+    <!-- Fall-back content here, just like with video and audio -->
+</canvas>
+
+
+
+
+NOTE:  ALL THESE ELEMENTS <VIDEO>, <AUDIO> & <CANVAS> ARE MORE POWERFUL WHEN COMBINED WITH SCRIPTING POWER OF JAVASCRIPT.
+
+
+

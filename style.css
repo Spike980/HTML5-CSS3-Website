@@ -1,0 +1,353 @@
+/* Style-Sheet for Meet-n-Greet.com */
+
+body {
+     font-family: Verdana, Arial, sans-serif;
+     background-color: #e2edff;
+     line-height: 125%;
+     padding: 0;
+     margin: 0;
+ 
+     }
+
+nav {
+
+	width: 180px;
+	height: 484px;
+	background: #7da5d8 url(Untitled.png) no-repeat;
+        
+	    }
+
+nav a {
+text-shadow: 1px 1px 2px gray;
+text-decoration: none;
+}
+
+
+header {
+
+	border-top: 3px solid #7da5d8;
+}
+
+
+li{
+  font-size: small;   
+  list-style-type: square;
+  }
+
+
+
+p{
+  font-size: small;
+  color: purple;
+ }
+
+
+
+em{
+  text-transform: Uppercase;
+  }
+
+#tagline p{
+	  font-style: italic;
+          font-family: Georgia, Times, serif; 
+	  border-top: 3px solid #7da5d8;
+	  border-bottom: 3px solid #8da5d3;
+	  padding-top: .2em;
+	  padding-bottom: .2em;
+	  padding-left: .8em;
+	  margin: 0;
+	  background: #bed8f3 url(175.jpg) repeat-y right;
+          }
+
+
+
+h1, h2, h3 {
+	    font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+
+	   }
+
+
+h1 {
+   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   font-size: x-large;
+   background-color: navy;
+   color: white;
+   padding-top: 2em;
+   padding-bottom: .2em;
+   padding-left: .4em;
+   margin: 0;
+   background: navy url(972.jpg) repeat-y right;
+   }
+
+
+h2{
+  font-size: 130%;
+  font-weight: normal;
+  color: navy;
+  padding-top: 15px;
+  text-shadow: 3px 3px 2px gray;
+  }
+
+h2,ul
+	{
+	 margin-top: 15px;
+	}
+
+.feature {
+
+	float: right;
+	margin: 10px;
+}
+
+a {
+   font-weight: bold; 
+  }
+
+
+a:link {
+	color: black;
+	}
+
+
+a:visited {
+	    color: navy;
+	   }
+
+
+a:hover {
+	text-decoration: none;
+	background-color: navy;
+	color: white;
+	}
+
+
+a:active {
+	  color: aqua;
+	  background-color: navy;
+	}
+
+
+
+.fun {
+	color: green;
+	font-family: Georgia, Times, Serif;
+	letter-spacing: 0.05em;
+     }
+
+blockquote.fun {
+		font-style: italic;
+		}
+/*
+#header, #sitebranding, #tagline, #navigation, #bodycontent{
+	border: 1px solid red;
+	padding: 2px;
+	margin-bottom: 2px;
+		}
+*/
+
+nav, #bodycontent, header {
+	position: absolute;
+}
+
+
+nav, #bodycontent {
+	top: 107px;
+}
+
+#bodycontent {
+	left: 200px;
+}
+
+
+header {
+	width: 100%;
+}
+
+
+.coursegallery img {
+	border: 15px solid white;
+}
+
+
+
+.coursegallery p {
+
+	font-size: 65%;
+	font-weight: bold;
+	margin-top: 2;
+	width: 430px;
+	line-height: 1.4em;
+	color: black;
+}
+
+
+
+.photocredit {
+
+	font-weight: normal;
+	color: gray;
+}
+
+
+.coursegallery {
+
+padding-bottom: 20px;
+margin-bottom: 10px;
+border-bottom: 1px solid navy;
+
+}
+
+
+.coursegallery img {
+border: 15px solid black;
+border-radius: 10px;
+box-shadow: 2px 2px 15px black, -2px -2px 15px black;
+margin-bottom: 10px;
+}
+
+
+.geek {
+position: relative;
+left: 100px;
+
+}
+
+
+
+table.referals {
+border-collapse: collapse;
+}
+
+table.referals th, td {
+padding: 4px;
+border: 1px solid #000066;
+}
+
+table.referals th {
+font-size: x-small;
+text-align: left;
+background: #241374 url(plain.jpg);
+color: #ffffff;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 2px;
+padding-right: 2px;
+}
+
+
+table.referals td {
+font-size: small;
+background: #e2edff url(fade.jpg) repeat-x ;
+}
+
+table.referals caption {
+color: #000066;
+font-size:small;
+text-align: left;
+padding-bottom: 5px;
+font-weight: bold;
+}
+
+.list {
+
+color: #000000;
+border: 1px solid black;
+padding: 0.55555em;
+margin-right: 800px ;
+background: #241374 url(plain.jpg) top right;
+
+}
+
+
+
+form.contact fieldset {
+border: 2px solid navy;
+padding: 10px;
+}
+
+form.contact legend {
+font-weight: bold;
+font-size: small;
+color: navy;
+padding: 5px;
+}
+
+
+
+form.contact {
+padding: 0;
+margin: 0;
+margin-top: -15px;
+line-height: 150%;
+}
+
+
+form.contact label {
+font-weight: bold;
+font-size: small;
+color: blue;
+}
+
+
+
+form.contact .buttonarea input {
+background:navy;
+color:white;
+font-weight: bold;
+padding: 5px;
+border: 1px solid black;
+}
+
+form.contact .buttonarea {
+text-align: center;
+padding: 4px;
+background-color: #0066ff;
+}
+
+
+form.contact label.fixedwidth {
+display: block;
+width: 240px;
+float: left;
+}
+
+form.contact .q_area h5 {
+color: navy;
+}
+
+
+
+
+aside {
+border: 2px solid gray;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+display: block;
+float: right;
+margin: 10px;
+padding: 10px;
+width: 30%;
+background: white;
+font-style: italic;
+color: gray;
+}
+
+
+
+aside blockquote {
+
+font-size: 1.2em;
+line-height: 1.4;
+margin: 0 0 0.5em 0;
+font-style: normal;
+color: #006;
+}
+
+
+#name {
+width: 20%;
+}
+
+#email {
+width: 20%;
+}

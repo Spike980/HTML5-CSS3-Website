@@ -1,0 +1,585 @@
+
+--> Some common entities of HTML :
+
+1) &gt;	-	greater than
+2) &lt;	-	less than
+3) &amp; -	ampersand symbol
+4) &pound; -	pound symbol
+5) &copy;  -    copy symbol
+6) &trade; -	trademark symbol
+
+
+-> An exclusive 'header' element has been added to html5, seeing the frequent use of <div id = "header"> in html pages.
+
+-> 'Pre' element shows text as is it is with carriage, spaces and tabs. These are useful for showing some code on web pages.
+
+
+-> Blockquote tag is used to give the quotes.
+
+-> Cite tag is used for citation.
+
+-> Cite can be used as an attribute of blockquote tag.
+
+
+->Embedded Style Sheet Syntax :
+
+<style type="text/css">
+p {
+font-weight: bold;
+color: red;
+}
+</style>
+
+
+
+
+
+-> Anchor tag (<a>) has four classes or states : 
+
+1. link
+2. visited
+3. hover
+4. active
+
+
+
+
+
+
+-> Rules and properties are applied according to specificity. That is which property related to an element is more specific for that element contents.
+
+
+
+
+
+-> We can change the size, create padding and move a block-level element. 
+
+-> For changing the width of the block we can name the block element as selector and 
+   width: value
+   height: value
+   in the curly braces.
+
+-> We can also give borders to block-level elements. Through CSS properties we can achieve various effects of borders namely:
+   1) Border-style
+   2) Border-width 
+   3) Border-color
+
+-> Types of borders :
+ 
+- solid
+- double
+- inset
+- ridge
+- dashed
+- dotted
+- outset
+- groove
+
+
+-> Border-size can be given in pixels, points or ems
+   Also border-size can be given as - thin, medium, thick.
+
+	Border-top and Border-bottom are also 2 properties.
+
+
+-> Padding and Margin are also CSS properties for block level elements.
+
+-> To remove cell-spacing between the cells in borders the attribute is :
+
+[ border-collapse: collapse; ]
+
+
+
+
+
+-> Various layouts of CSS?????
+
+
+
+-> Using CSS border and padding props for making links appear as buttons.
+
+-> Using props to increase the link area.
+
+-> Setting list items in horizontal line.
+
+
+
+
+Various CSS Layout :-
+------------------
+
+1) Absolute :
+
+position: absolute;
+top: value;
+left: value;
+
+(relative to the container)
+
+
+
+2) Relative :
+
+position: relative;
+top: value;
+left: value;
+
+(relative to previous position)
+
+
+
+3) Float :
+
+float: right or left or top or bottom;
+
+(rest of the elements sets accordingly)
+
+
+
+
+** Styling Lists :-
+   -------------
+
+list-style-type: circle, disc, square,none
+
+
+
+<form enctype="multipart/form-data" method="post"
+action="http://www.freedback.com/mail.php" accept-charset="UTF-8"> 
+
+
+
+-> Form Processing Website	-	www.Freedback.com
+
+
+-> Server Side Includes (SSI)
+
+W3C Markup Validation Service
+
+
+-> W3C CSS validator :			checks for correctness of CSS code.
+
+http://jigsaw.w3.org/css-validator/
+
+
+
+
+HTML5 INTRODUCTIONS :
+-------------------
+
+article, aside, audio, bdi, canvas, command, datalist, details, embed,
+figcaption, figure, footer, header, hgroup, keygen, mark, meter, nav, output,
+progress, rp, rt, ruby, section, source, summary, time, video, and wbr.
+
+
+
+
+<figure>
+<img src="example.jpg"/>
+<figurecaption> blah... blah... blah... </figurecaption>
+</figure>
+
+
+
+
+** Introduction to HTML forms:
+   --------------------------
+
+1) <input type="range">	-	slider
+2) <input type="email">	-	e-mail address
+3) <input type="date">	-	date-picker
+4) <input type="url"> 	-	url-box (with a .com button, as in smartphones while opening web-browser)
+
+
+
+
+** Other Introductions (related to HTML) :
+   -------------------------------------
+
+1) Geolocation :	ability to pin-point physical location in the browser.
+2) Offline Storage :	ability to download and store required files in advance, which can be make use of in the event of lack of internet connection.
+3) The Canvas Element :	a resolution dependent bitmap-canvas, used for rendering graphs, game graphics or other visual images on-the-fly.
+
+
+
+
+** Vendor Prefixes:
+   ---------------
+
+-moz	-	mozilla firefox
+-webkit -	chrome/safari
+-o	-	opera
+-ms	-	Internet Explorer
+
+
+
+** Box Shadow :
+   ----------
+
+box shadow: 2px 2px 10px black;		-- offset x-axis, offset y-axis, amount of blur, color
+
+
+
+** Defining FONT-NAME ALIAS :
+   ------------------------
+
+@font-face {
+  font-family: mf;
+  src:  url(/fonts/monkeyfeature.ttf/)
+}
+
+-> font-family: mf   can now be used anywhere in the stylesheet.
+
+
+-> Font-squirrel or Google Web fonts provide free online fonts.
+
+-> Using Font-squirrel new fonts can be created.
+
+-> Typekit & FontDeck provides paid fonts.
+
+
+
+**Using GOOGLE WEB FONTS :-
+  ----------------------
+
+-> Visit http://www.google.com/webfonts/
+
+-> Select one of the fonts from the lists by clicking on it.
+
+-> Select "Use This Font" Option
+
+-> Copy the html code generated and paste it on your html page.
+
+
+
+
+
+** OTHER CSS3 FEATURES :-
+   ------------------
+
+1) Multiple Background images
+
+2) opacity
+
+3) RGBA color (setting transparency level on background colors)
+
+4) Additional Attribute Selector
+
+5) Media Queries (apply different styles based on the browser or device)
+
+ 
+
+
+** COMMON JQUERY EVENTS :-
+   --------------------
+
+1) .mouseover()
+2) .mouseout()
+3) .click()
+4) .focus()
+5) .submit()
+
+
+** COMMON JQUERY ACTIONS :-
+   ---------------------
+
+1) .hide()
+2) .show()
+3) .fadeIn()
+4) .fadeOut()
+5) .fadeTo()
+6) .slideUp()
+7) .slideDown()
+
+
+**SAMPLE JQUERY CODE (for showing figcaption only on mousehover)
+  --------------------------------------------------------------
+
+$("figure").each(function(){
+$(this).hover(function(){
+$(this).find("figcaption").slideDown('medium');
+},function(){
+$(this).find("figcaption").slideUp('medium');
+});
+});
+
+
+
+
+
+-> BrowserCam or Browsershots	-	online service that checks for a live website about how it looks in different browsers & OS's.
+
+-> PositionIsEverything & ExplorerExposed	-	websites that reports the CSS bugs in web browsers.
+
+
+
+
+
+
+
+
+
+							** HTML 5 **
+							   ------
+
+
+
+1. Abbreviation
+   ------------
+
+-> Markup an abbreviation, a shortened form of word or phrase.
+
+Tag	-	<abbr>
+
+E.g.	-	<p> This website is about <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="cascading style sheet">			CSS</abbr>. </p>
+
+
+
+
+2. Quotation
+   ---------
+
+2.a) <q>	-	shorter quotation. 
+2.b) <blockquote cite="www.wikipedia.org">	-	multi-line quotation
+
+E.g.	-
+<p>So I asked Bob about quotations on the Web and he said <q>I know as much about quotations as I do about pigeon fancying</q>.
+Luckily, I found HTML Dog and it said:</p>
+
+<blockquote cite="http://www.htmldog.com/guides/html/intermediate/text/">
+    <p>blockquote and q are used for quotations. blockquote is generally used for standalone often multi-line quotations 
+       whereas q is used for shorter, in-line quotations.</p>
+</blockquote>
+
+
+
+3. Citation
+   --------
+
+<cite>The cite </cite>
+
+
+
+4. CODE
+   ----
+
+-> Represent any form of computer code.
+
+
+5. VAR
+   ---
+
+-> Used for variables ( which could be a variable in anything, not just the code - it could be a variable in equation, for example)
+ 
+<samp>	-	Sample OUTPUT
+<kbd>	-	User Input (Keyboard)
+
+
+E.g.-
+----
+
+<p>If you add the line <code><var>givevaderachuckle</var> = true;</code> to the <code>destroy_planet</code> subroutine and then type <kbd>ilovejabba</kbd> into the console, the big bad green Death Star laser will etch <samp>Slug Lover!</samp> on the planet's surface.</p>
+
+
+
+6. PRE-FORMATTED TEXT
+   ------------------
+
+-> It takes notice of every every character in it, including whitespaces. Useful in places where indentation is relevant.
+
+Tag	-	<pre>		</pre>
+
+E.g.	-	
+
+<pre><code>
+&lt;div id="intro"&gt;
+    &lt;h1&gt;Some heading&lt;/h1&gt;
+    &lt;p&gt;Some paragraph paragraph thing thing thingy.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+
+
+
+
+
+7. META TAGS
+   ---------
+
+-> Meta tags dont alter the appearance of the page, but is used by likes of search engine to catalogue information about the web page.
+
+ATTRIBUTES :	name, http-equiv, content & CHARSET
+
+-> "Content" is used in conjunction with "name" & "http-equiv" attributes
+
+
+ a) NAME :	Its value can be anything you like. Common values are	-	"author", "description" & "keywords" 
+
+ "author" is explicitly used to state one of the HTML page's authors
+ "description" is often used by search engines to display a description of the web pages in the search results.
+
+
+
+ b) HTTP-EQUIVALENT :	It will make an HTTP header, i.e. information sent to the server where the web page is held.
+			This attribute is rarely used, but the possible values are:
+  
+   			"content-type"	-	encoding declaration
+			"default-style"	-	Preferred style-sheet from a list of "link" and "style" elements.
+			"refresh"	-	how often(in seconds) the page automatically refreshes or automatically redirects to
+						another page. (considered a bad option for accessibility)
+
+
+
+-> NOTE: (<meta charset = "UTF-8"/> is same as <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+
+
+
+E.g. -
+---
+
+
+<head>
+    <title>Air conditioners? YEAH conditioners!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="3"><!--not recommended for sane people-->
+    <meta name="description" content="This is my really, really, REALLY exciting web page about air conditioners">
+</head>
+
+
+-> Also, <meta scheme="">, where "scheme" attribute defines how the value of the "content" attribute is interpreted.
+
+
+
+
+
+
+
+
+
+
+
+
+8. ADDRESS
+   -------
+
+-> Used specifically for contact details, for the whole website or any article on a web-page.
+
+TAG	-	<address>.....</address>
+
+
+
+9. DEFINITION TERMS
+   ----------------
+
+TAG	-	<dfn title="">......</dfn>
+
+-> Used to highlight 1st use of a term, and can be used to describe the term.
+
+E.g.	-
+---
+
+<p>Bob's <dfn title="Dog">canine</dfn> mother and <dfn title="Horse">equine</dfn> father sat him down and carefully explained that he was an <dfn title="A mutation that combines two or more sets of chromosomes from different species">allopolyploid</dfn> organism.</p>
+
+
+
+
+
+10. BI-DIRECTIONAL TEXT
+    -------------------
+
+-> It is used to reverse the direction of the text, and can be used to display the languages that read right-to-left.
+
+TAG	-	<bdo dir="ltr" or "rtl"> ..... </bdo>	
+ 		
+		"rtl" : right-to-left		"ltr" : left-to-right
+
+
+
+
+
+11. EDITORIAL
+    ---------
+
+Two tags come under editorial	-	<del> & <ins>
+
+-> They aren't limited to text and can be used over whole swathes of contents.
+
+
+ATTRIBUTES:
+
+ 1) "datetime = "2014-01-26" " 	-	specifies when change was made.
+ 2) "cite = "http://www.xyz.com" "	-	specifies the reason for making the change.
+
+
+E.g. -
+----
+
+<p>I have decided to <del datetime="2013-01-26">decrease</del> <ins cite="http://www.icecreamforall.com/changeofpolicy/">increase</ins> the amount of free ice cream that the State will provide for its citizens.</p>
+
+
+-> By default, <del> is "STRIKE-THROUGH"	and 	<ins> is "UNDERLINE"
+
+
+
+
+
+12. ARTICLES & SECTIONS
+    -------------------
+
+-> Article marksup the standalone section of the content. It can enclose 1 or more "general section tags".
+
+<article>
+    <section id="intro">
+        <p>[An introduction]</p>
+    </section>
+    <section id="main_content">
+        <p>[Content]</p>
+    </section>
+    <section id="related">
+        <ul>
+            <li><a href="that.html">That related article</a></li>
+            <li><a href="this.html">This related article</a></li>
+        </ul>
+    </section>
+</article>
+
+
+
+
+
+
+13. HEADER & FOOTER
+    ---------------
+
+<body>
+<article>
+    <header>
+        <h1>Alternatively&hellip;</h1>
+        <p>[An introduction]</p>
+    </header>
+    <section id="main_content">
+        <p>[Content]</p>
+    </section>
+    <footer>
+        <p>[End notes]</p>
+    </footer>
+</article>
+<footer>
+    <p>[Copyright bumf]</p>
+</footer>
+</body>
+
+
+
+
+14. ASIDE
+    -----
+
+15. NAV
+    ---
+
+
+&hellip;	--	This produces output as ( ... ) 
+
+
